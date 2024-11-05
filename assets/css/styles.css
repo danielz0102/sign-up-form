@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     display: flex;
     height: 100vh;
@@ -98,17 +98,17 @@ section:has(.big-text) {
 }
 
 .big-text {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 500;
     width: 675px;
 }
 
-.big-text:first-child {
+section:first-child .big-text:first-of-type {
     margin-bottom: 0;
 }
 
 section:has(form) {
-    padding-block: 0;
+    padding-block: 0 24px;
     
     display: flex;
     flex-direction: column;
@@ -118,7 +118,7 @@ section:has(form) {
     z-index: 1;
 }
 
-section:has(form) h2 {
+section:has(form) .big-text {
     margin-top: 0;
 }
 
@@ -138,6 +138,7 @@ label, input {
 label {
     font-size: 0.8rem;
     letter-spacing: 1px;
+    text-shadow: 0 0 2px #c4c4c4;
 }
 
 input {
