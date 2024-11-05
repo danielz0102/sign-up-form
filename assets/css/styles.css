@@ -25,7 +25,7 @@ img {
 #logo {
     position: absolute;
     z-index: 1;
-    top: 100px;
+    top: 200px;
     width: 100%;
     text-align: center;
 
@@ -63,6 +63,7 @@ figcaption {
     z-index: 1;
     color: #fff;
     width: 100%;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -86,8 +87,8 @@ section {
     padding: 32px 48px;
 }
 
-section:not(:nth-child(2)) {
-    background-color: #f7f7f7;
+section:not(:has(form)) {
+    background-color: #f9fafb;
 }
 
 section:has(.big-text) {
@@ -100,6 +101,66 @@ section:has(.big-text) {
     font-size: 1.4rem;
     font-weight: bold;
     width: 675px;
+}
+
+.big-text:first-child {
+    margin-bottom: 0;
+}
+
+section:has(form) {
+    padding-block: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 3px 5px #cdcbcb;
+    z-index: 1;
+}
+
+section:has(form) h2 {
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 64px;
+}
+
+.form-row:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    padding: 6px 8px;
+    width: 250px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2175f3;
+    box-shadow: 0 0 2px #000;
+}
+
+input[type='password']:invalid {
+    border-color: #cc0c0c;
+}
+
+input[type='password']:invalid + span::after {
+    content: '* Passwords do not match';
+    color: #cc0c0c;
+    font-size: 0.8rem;
 }
 
 .btn-submit {
