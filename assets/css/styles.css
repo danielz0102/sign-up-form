@@ -30,7 +30,7 @@ img {
     text-align: center;
 
     background-color: #00000077;
-    height: 150px;
+    height: 155px;
 
     display: flex;
     align-items: center;
@@ -38,13 +38,13 @@ img {
 }
 
 #logo img {
-    width: 85px;
+    width: 100px;
 }
 
 #logo h1 {
     color: #fff;
     font-family: 'Norse Bold', Helvetica;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 figure {
@@ -91,24 +91,26 @@ section:not(:has(form)) {
     background-color: #f9fafb;
 }
 
-section:has(.big-text) {
+section:first-child {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 48px;
 }
 
 .big-text {
     font-size: 1.5rem;
     font-weight: 500;
     width: 675px;
+    margin: 0;
 }
 
-section:first-child .big-text:first-of-type {
-    margin-bottom: 0;
+.big-text:first-child {
+    margin-bottom: 24px;
 }
 
 section:has(form) {
-    padding-block: 0 24px;
+    padding-block: 16px 24px;
     
     display: flex;
     flex-direction: column;
@@ -116,10 +118,6 @@ section:has(form) {
 
     box-shadow: 0 3px 5px #cdcbcb;
     z-index: 1;
-}
-
-section:has(form) .big-text {
-    margin-top: 0;
 }
 
 .form-row {
@@ -151,7 +149,7 @@ input {
 
 input:focus {
     border-color: #2175f3;
-    box-shadow: 0 0 2px #000;
+    box-shadow: 3px 3px 5px #c2c2c2;
 }
 
 input[type='password']:invalid {
